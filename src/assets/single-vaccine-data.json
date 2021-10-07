@@ -1,0 +1,50 @@
+[
+  {
+    "individualRef": "A101",
+    "name": "Vignesh Mishra",
+    "age": 24,
+    "mobile": "9878656737",
+    "address": "Vashi",
+    "vaccineRef": "vac101",
+    "firstDoseOn": "2021-09-01T00:00:00.000Z",
+    "nextVaccineOn": "2021-11-01T00:00:00.000Z",
+    "secondDoseOn": null,
+    "vaccineName": "CovidShield"
+  },
+  {
+    "individualRef": "A102",
+    "name": "Mayur",
+    "age": 24,
+    "mobile": "7867898654",
+    "address": "Goregaon",
+    "vaccineRef": "vac102",
+    "firstDoseOn": "2021-07-01T00:00:00.000Z",
+    "nextVaccineOn": "2021-09-01T00:00:00.000Z",
+    "secondDoseOn": null,
+    "vaccineName": "CovidShield"
+  },
+  {
+    "individualRef": "A103",
+    "name": "Sumit Naidu",
+    "age": 54,
+    "mobile": "8765787878",
+    "address": "Secunderabad",
+    "vaccineRef": "vac103",
+    "firstDoseOn": "2021-07-30T00:00:00.000Z",
+    "nextVaccineOn": "2021-09-30T00:00:00.000Z",
+    "secondDoseOn": null,
+    "vaccineName": "CovidShield"
+  },
+  {
+    "individualRef": "A104",
+    "name": "Suchita Nair",
+    "age": 36,
+    "mobile": "9856456789",
+    "address": "Kurla",
+    "vaccineRef": "vac104",
+    "firstDoseOn": "2021-09-01T00:00:00.000Z",
+    "nextVaccineOn": "2021-11-01T00:00:00.000Z",
+    "secondDoseOn": null,
+    "vaccineName": "CovidShield"
+  }
+]
