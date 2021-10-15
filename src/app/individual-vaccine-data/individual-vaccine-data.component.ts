@@ -1,20 +1,40 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router,ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-individual-vaccine-data',
   template: `
   <p>Data Associated With Vaccine Reference {{referenceId}} Will Be Shown Here</p>
+  <p><button type="button" (click)="previousEntry()">Previous</button>&nbsp;
+  <button type="button" (click)="nextEntry()">Next</button>
+  </p>
+  <button type="button" (click)="goBack()">Back</button>
   `,
   styles: [''],
 })
 export class IndividualVaccineDataComponent implements OnInit {
-  private referenceId: string;
+  private referenceId: number;
 
-  constructor(private _activeRoute: ActivatedRoute) {}
+  constructor(private _route:Router,private _activeRoute: ActivatedRoute) {}
 
   ngOnInit() {
-    let id = this._activeRoute.snapshot.paramMap.get('vaccineRef');
-    this.referenceId = id;
+    this._activeRoute.paramMap.subscribe((param:ParamMap)=>{
+    let id=parseInt(param.get('vaccineRef'));
+    this.referenceId=id;
+    });
   }
+  previousEntry(){
+  let previousId=this.referenceId - 1;
+
+  this._route.navigate(['../',previousId],{relativeTo:this._activeRoute})
+  }
+  nextEntry(){
+    let nextId=this.referenceId + 1;
+  
+    this._route.navigate(['../',nextId],{relativeTo:this._activeRoute})
+    }
+
+    goBack(){
+      this._route.navigate(['../',{id:this.referenceId}],{relativeTo:this._activeRoute});
+    }
 }

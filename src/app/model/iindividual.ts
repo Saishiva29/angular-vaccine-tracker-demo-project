@@ -4,7 +4,7 @@ export interface IIndividual {
   age: number;
   mobile: string;
   address: string;
-  vaccineRef: string;
+  vaccineRef: number;
   firstDoseOn: Date;
   nextVaccineOn: Date;
   secondDoseOn: Date;
