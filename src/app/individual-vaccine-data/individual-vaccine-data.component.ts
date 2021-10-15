@@ -5,6 +5,9 @@ import { Router,ActivatedRoute, ParamMap } from '@angular/router';
   selector: 'app-individual-vaccine-data',
   template: `
   <p>Data Associated With Vaccine Reference {{referenceId}} Will Be Shown Here</p>
+  <a (click)="showVaccineData()" style='color:blue;cursor:pointer;'>Vaccine Ingredient</a>&nbsp;|
+  <a (click)="showVaccineCenter()" style='color:blue;cursor:pointer;'>Vaccine Center</a>
+  <router-outlet></router-outlet>
   <p><button type="button" (click)="previousEntry()">Previous</button>&nbsp;
   <button type="button" (click)="nextEntry()">Next</button>
   </p>
@@ -36,5 +39,13 @@ export class IndividualVaccineDataComponent implements OnInit {
 
     goBack(){
       this._route.navigate(['../',{id:this.referenceId}],{relativeTo:this._activeRoute});
+    }
+
+    showVaccineData(){
+      this._route.navigate(['ingredient'],{relativeTo:this._activeRoute});
+    }
+
+    showVaccineCenter(){
+      this._route.navigate(['center'],{relativeTo:this._activeRoute});
     }
 }

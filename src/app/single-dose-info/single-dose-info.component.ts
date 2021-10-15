@@ -19,7 +19,7 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let x of singleDoseIndividuals;let indexCount=index">
+  <tr *ngFor="let x of singleDoseIndividuals;let indexCount=index" [style.backgroundColor]="lastSeenEntryId==x.vaccineRef?'gray':'none'">
   <td>{{indexCount+1}}</td>
   <td><a (click)="showIndividualData(x)" style='color:blue;cursor:pointer;'>{{x.name}}</a></td>
   <td>{{x.age}}</td>
